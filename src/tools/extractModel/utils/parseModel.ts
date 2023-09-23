@@ -23,7 +23,7 @@ export const parseModel = (model?: Row[]) => {
   if (parsedModel) {
     for (let i = 2; i < parsedModel.length ?? 2; i++) {
       const valuesPerProperty = parseValues(
-        parsedModel[i],
+        parsedModel[i] ?? [],
         typesIndex ?? [],
         types ?? [],
         propertiesRow ?? []

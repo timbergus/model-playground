@@ -15,3 +15,5 @@ export type Result = Record<
   string,
   Record<string, Record<string, Dependency | string | boolean | undefined>>
 >
+
+export type Values = Record<string, Record<string, string[]>>

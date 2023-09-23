@@ -5,8 +5,8 @@ function isCountry(country: Country): country is Country {
   return COUNTRIES[country] !== undefined
 }
 
-export const parseRow = (row: Row): Row => {
-  return row.map((item) => {
+export const parseRow = (row?: Row): Row | undefined => {
+  return row?.map((item) => {
     switch (item) {
       case '✅':
         return true
