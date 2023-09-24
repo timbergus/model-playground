@@ -1,12 +1,14 @@
 #! /usr/bin/env bun
 
-import { program } from 'commander'
+import { Command } from 'commander'
 import { extractModel } from './tools/extractModel'
 import { extractValues } from './tools/extractValues'
 // import { dirname } from 'node:path'
 import { existsSync, mkdirSync } from 'node:fs'
 import { textSync } from 'figlet'
 import chalk from 'chalk'
+
+const program = new Command()
 
 program.name('model-cli').description('CLI for XLSX models').version('0.0.1')
 
@@ -66,9 +68,12 @@ program
       console.log(chalk.cyan('✅', 'Values extracted successfully', '\n'))
     } else {
       console.log(
-        chalk.red('❗️', 'Please select a model or values XLSX file', '\n')
+        chalk.red('❗️', 'Please, select a model or values XLSX file', '\n')
       )
     }
+  })
+  .configureOutput({
+    outputError: (error, write) => write(chalk.red('❗️', error, '\n')),
   })
 
 console.log(chalk.blue(textSync('Model CLI')))
