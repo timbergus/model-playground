@@ -13,3 +13,13 @@ Then use one of the available commands.
 This command requires a file with a name ended in `model.xlsx` or `values.xlsx` depending if it is a model file or a values file. You can also add a `-p`, `--path` option to tell the tool where to create the parsed file.
 
 The parsed files will be `JSON` files that can be used through the model hooks: `useModel` and `useValues` (in `src/tools`).
+
+## Model
+
+The model lives in an Excel file. Easy to read, easy to edit. It contains a list of properties that apply on types over subtypes (in this case, countries).
+
+> A certain property applies as required/optional/not-applied for a type in a certain subtype.
+
+The rest of the values are metadata, and store as metadata object that can be readed and used for as much additional information as needed.
+
+![Model](./images/model.png)
