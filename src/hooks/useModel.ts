@@ -1,10 +1,17 @@
-import { Country } from '../utils/parseRow'
+import { COUNTRIES } from '../constants'
+import { Country, Model } from '../types'
 
-import model from '../../build/business.model.json'
-
-export const useModel = (country: Country, type: string) => {
-  return {
-    isVisible: (property: string) => {},
-    isRequired: (property: string) => {},
-  }
-}
+export const useModel = <TModel extends Model>(
+  model: TModel,
+  country: Country,
+  type: Extract<keyof TModel[keyof TModel], string>
+) => ({
+  isVisible: (property: Extract<keyof TModel, string>) => {
+    const value = model[property]?.[type]?.[COUNTRIES[country]]
+    return Boolean(model[property]) && (value || value === undefined)
+  },
+  isRequired: (property: Extract<keyof TModel, string>) => {
+    const value = model[property]?.[type]?.[COUNTRIES[country]]
+    return Boolean(model[property]) && value
+  },
+})

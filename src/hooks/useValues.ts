@@ -1,9 +1,10 @@
-import { Country } from '../utils/parseRow'
+import type { Country, Values } from '../types'
+import { COUNTRIES } from '../constants'
 
-import model from '../../build/business.model.json'
-
-export const useValues = (country: Country, type: string) => {
-  return {
-    getValues: (value: string) => {},
-  }
-}
+export const useValues = <TValues extends Values>(
+  values: TValues,
+  country: Country
+) => ({
+  getValues: (value: Extract<keyof TValues, string>) =>
+    values[value][COUNTRIES[country]],
+})

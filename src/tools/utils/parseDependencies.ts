@@ -1,4 +1,4 @@
-import type { Dependency } from '../../../types'
+import type { Dependency } from '../../types'
 
 export const parseDependencies = (dependencies: string): Dependency => {
   const segments = dependencies.split(';')

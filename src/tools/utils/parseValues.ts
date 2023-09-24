@@ -1,4 +1,4 @@
-import type { Result, Row } from '../../../types'
+import type { Result, Row } from '../../types'
 import { parseDependencies } from './parseDependencies'
 
 export const parseValues = (

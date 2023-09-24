@@ -1,7 +1,7 @@
 import { parseValues } from './parseValues'
 import { parseRow } from './parseRow'
-import type { Result, Row } from '../../../types'
-import { getIndices } from '../../../utils/getIndices'
+import type { Result, Row } from '../../types'
+import { getIndices } from './getIndices'
 
 export const parseModel = (model?: Row[]) => {
   let result: Result = {}

@@ -1,5 +1,5 @@
-import { COUNTRIES } from '../../../constants'
-import type { Country, Row } from '../../../types'
+import { COUNTRIES } from '../../constants'
+import type { Country, Row } from '../../types'
 
 function isCountry(country: Country): country is Country {
   return COUNTRIES[country] !== undefined
