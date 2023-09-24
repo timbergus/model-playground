@@ -1,5 +1,5 @@
-import type { Country, Values } from '../types'
 import { COUNTRIES } from '../constants'
+import type { Country, Values } from '../types'
 
 export const useValues = <TValues extends Values>(
   values: TValues,

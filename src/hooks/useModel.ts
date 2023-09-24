@@ -1,5 +1,5 @@
 import { COUNTRIES } from '../constants'
-import { Country, Model } from '../types'
+import type { Country, Model } from '../types'
 
 export const useModel = <TModel extends Model>(
   model: TModel,
