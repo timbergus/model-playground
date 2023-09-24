@@ -50,7 +50,7 @@ program
   .option('-p, --path <path>', 'extract model or values', 'model')
   .action((file: string, options: { path: string }) => {
     if (!existsSync(options.path)) {
-      mkdirSync(options.path)
+      mkdirSync(options.path, { recursive: true })
     }
     if (file.toLowerCase().includes('model.xlsx')) {
       extractModel(file, options.path)
