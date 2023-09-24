@@ -2,6 +2,7 @@ import { program } from 'commander'
 import { extractModel } from './tools/extractModel'
 import { extractValues } from './tools/extractValues'
 import { dirname } from 'node:path'
+import { existsSync, mkdirSync } from 'node:fs'
 
 program.name('sas-cli').description('CLI for SAS').version('0.0.1')
 
@@ -45,9 +46,12 @@ program
 program
   .command('extract')
   .description('extract logic and values from model')
-  .argument('<file>', 'model or values file')
-  .option('-p, --path <path>', 'extract model or values', '.')
+  .argument('<file>', 'model or values file (xlsx)')
+  .option('-p, --path <path>', 'extract model or values', 'model')
   .action((file: string, options: { path: string }) => {
+    if (!existsSync(options.path)) {
+      mkdirSync(options.path)
+    }
     if (file.toLowerCase().includes('model.xlsx')) {
       extractModel(file, options.path)
     } else if (file.toLowerCase().includes('values.xlsx')) {

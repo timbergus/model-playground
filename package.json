@@ -3,8 +3,8 @@
   "module": "src/index.ts",
   "type": "module",
   "scripts": {
-    "extract:model": "bun --watch src/tools/extractModel.ts \"data/Model.xlsx\"",
-    "extract:values": "bun --watch src/tools/extractValues.ts \"data/Values.xlsx\""
+    "build:model": "bun src/index.ts extract",
+    "build:values": "bun src/index.ts extract data/Values.xlsx -p build"
   },
   "devDependencies": {
     "bun-types": "latest"
