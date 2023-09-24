@@ -1,0 +1,73 @@
+{
+  "firstProperty": {
+    "Type A": {
+      "ESP": true,
+      "FRA": true,
+      "DEU": true
+    },
+    "metadata": {
+      "value": "string",
+      "creation": true,
+      "editable": false,
+      "Notes": "This is a property."
+    },
+    "Type B": {
+      "ITA": true,
+      "FRA": true,
+      "DEU": true
+    },
+    "Type C": {
+      "FRA": true
+    }
+  },
+  "secondProperty": {
+    "Type A": {
+      "ITA": true,
+      "FRA": true,
+      "DEU": true
+    },
+    "metadata": {
+      "value": "string",
+      "creation": true,
+      "Notes": "This is another property."
+    },
+    "Type B": {
+      "ESP": false,
+      "ITA": false,
+      "FRA": true,
+      "DEU": true
+    },
+    "Type C": {
+      "ESP": true,
+      "ITA": true,
+      "FRA": false,
+      "DEU": true
+    }
+  },
+  "thirdProperty": {
+    "Type A": {
+      "ESP": false,
+      "FRA": false,
+      "DEU": false
+    },
+    "metadata": {
+      "value": "VALUES",
+      "creation": false,
+      "editable": true,
+      "dependencies": {
+        "firstProperty": 32,
+        "secondProperty": false
+      },
+      "Notes": "Nothing more to say about this one."
+    },
+    "Type B": {
+      "ESP": true,
+      "ITA": false
+    },
+    "Type C": {
+      "ESP": false,
+      "ITA": false,
+      "FRA": true
+    }
+  }
+}
