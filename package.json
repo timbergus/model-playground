@@ -3,8 +3,8 @@
   "module": "src/index.ts",
   "type": "module",
   "scripts": {
-    "extract:model": "bun --watch src/tools/extractModel/extractModel.ts \"data/Model.xlsx\"",
-    "extract:values": "bun --watch src/tools/extractValues/extractValues.ts \"data/Values.xlsx\""
+    "extract:model": "bun --watch src/tools/extractModel.ts \"data/Model.xlsx\"",
+    "extract:values": "bun --watch src/tools/extractValues.ts \"data/Values.xlsx\""
   },
   "devDependencies": {
     "bun-types": "latest"
@@ -13,6 +13,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "commander": "^11.0.0",
     "node-xlsx": "^0.23.0"
   }
 }
