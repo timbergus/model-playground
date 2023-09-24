@@ -2,18 +2,35 @@
   "name": "model-playground",
   "module": "src/index.ts",
   "type": "module",
+  "bin": {
+    "model-cli": "src/index.ts"
+  },
+  "author": {
+    "name": "Gustavo Muñoz",
+    "email": "timbergus@gmail.com"
+  },
   "scripts": {
     "build:model": "bun src/index.ts extract",
     "build:values": "bun src/index.ts extract data/Values.xlsx -p build"
   },
+  "keywords": [
+    "cli",
+    "bun",
+    "typescript"
+  ],
+  "license": "MIT",
   "devDependencies": {
+    "@types/figlet": "^1.5.6",
     "bun-types": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "chalk": "^5.3.0",
     "commander": "^11.0.0",
-    "node-xlsx": "^0.23.0"
+    "figlet": "^1.6.0",
+    "node-xlsx": "^0.23.0",
+    "remove": "^0.1.5"
   }
 }

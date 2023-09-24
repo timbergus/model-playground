@@ -8,7 +8,7 @@ import { existsSync, mkdirSync } from 'node:fs'
 import { textSync } from 'figlet'
 import chalk from 'chalk'
 
-program.name('sas-cli').description('CLI for SAS').version('0.0.1')
+program.name('model-cli').description('CLI for XLSX models').version('0.0.1')
 
 // TODO Make hooks install option.
 // program
@@ -71,6 +71,6 @@ program
     }
   })
 
-console.log(chalk.blue(textSync('SAS CLI')))
+console.log(chalk.blue(textSync('Model CLI')))
 
 program.parse()

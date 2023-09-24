@@ -1,15 +1,15 @@
-# model-playground
+# Model Playground
 
-To install dependencies:
+This CLI contains tools to manage models.
 
-```bash
-bun install
-```
+It's based on [Bun](https://bun.sh), so you need to install it to use the CLI. Don't worry, its cool 😁
 
-To run:
+Clone the repo and install it locally as global application: `npm install -g .`. To install dependencies run `bun install`.
 
-```bash
-bun run src/index.ts
-```
+Then use one of the available commands.
 
-This project was created using `bun init` in bun v1.0.2. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## Extract
+
+This command requires a file with a name ended in `model.xlsx` or `values.xlsx` depending if it is a model file or a values file. You can also add a `-p`, `--path` option to tell the tool where to create the parsed file.
+
+The parsed files will be `JSON` files that can be used through the model hooks: `useModel` and `useValues` (in `src/tools`).
