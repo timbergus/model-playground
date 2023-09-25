@@ -73,7 +73,7 @@
   "fourthProperty": {
     "Type A": {
       "ESP": false,
-      "FRA": true,
+      "FRA": false,
       "DEU": true
     },
     "Type B": {
@@ -93,7 +93,7 @@
   "fifthProperty": {
     "Type A": {
       "ESP": true,
-      "FRA": true,
+      "FRA": false,
       "DEU": false
     },
     "Type B": {
@@ -113,6 +113,7 @@
     "Type A": {
       "ESP": false,
       "ITA": true,
+      "FRA": false,
       "DEU": false
     },
     "Type B": {

@@ -16,6 +16,7 @@ export const parseRow = (row?: Row): Row | undefined => {
       case '⭕️':
         return undefined
       case '❌':
+      case '💤':
         return false
       default:
         if (typeof item === 'string' && isCountry(item as Country)) {
