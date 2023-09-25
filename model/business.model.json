@@ -69,5 +69,68 @@
       "ITA": false,
       "FRA": true
     }
+  },
+  "fourthProperty": {
+    "Type A": {
+      "ESP": false,
+      "FRA": true,
+      "DEU": true
+    },
+    "metadata": {
+      "value": "number"
+    },
+    "Type B": {
+      "ESP": true,
+      "ITA": false,
+      "DEU": true
+    },
+    "Type C": {
+      "ESP": false,
+      "FRA": true,
+      "DEU": true
+    }
+  },
+  "fifthProperty": {
+    "Type A": {
+      "ESP": true,
+      "FRA": true,
+      "DEU": false
+    },
+    "metadata": {
+      "value": "number"
+    },
+    "Type B": {
+      "ESP": true,
+      "FRA": true,
+      "DEU": false
+    },
+    "Type C": {
+      "ITA": true,
+      "FRA": true
+    }
+  },
+  "sixthProperty": {
+    "Type A": {
+      "ESP": false,
+      "ITA": true,
+      "DEU": false
+    },
+    "metadata": {
+      "value": "MORE_VALUES",
+      "dependencies": {
+        "secondProperty": "sad"
+      }
+    },
+    "Type B": {
+      "ESP": false,
+      "ITA": true,
+      "FRA": false,
+      "DEU": true
+    },
+    "Type C": {
+      "ESP": true,
+      "FRA": false,
+      "DEU": false
+    }
   }
 }

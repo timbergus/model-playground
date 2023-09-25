@@ -6,6 +6,9 @@ function isCountry(country: Country): country is Country {
 }
 
 export const parseRow = (row?: Row): Row | undefined => {
+  if (row && row?.length <= 1) {
+    return undefined
+  }
   return row?.map((item) => {
     switch (item) {
       case '✅':
