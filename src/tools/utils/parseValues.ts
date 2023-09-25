@@ -11,6 +11,8 @@ export const parseValues = (
 
   const property = row.at(0)
 
+  const end = indices.at(-1)
+
   if (typeof property === 'string') {
     result[property] = {}
     types.forEach((type, index) => {
@@ -21,22 +23,21 @@ export const parseValues = (
           result[property][type][country] = row[iter]
         }
       }
-      const end = indices.at(-1)
-      if (end) {
-        result[property].metadata = {}
-        for (let iter = end; iter < propertiesRow.length; iter++) {
-          const prop = propertiesRow[iter]
-          if (typeof prop === 'string') {
-            const value = row[iter]
-            if (prop === 'dependencies' && typeof value === 'string') {
-              result[property].metadata[prop] = parseDependencies(value)
-            } else {
-              result[property].metadata[prop] = value
-            }
+    })
+    if (end) {
+      result[property].metadata = {}
+      for (let iter = end; iter < propertiesRow.length; iter++) {
+        const prop = propertiesRow[iter]
+        if (typeof prop === 'string') {
+          const value = row[iter]
+          if (prop === 'dependencies' && typeof value === 'string') {
+            result[property].metadata[prop] = parseDependencies(value)
+          } else {
+            result[property].metadata[prop] = value
           }
         }
       }
-    })
+    }
   }
 
   return result

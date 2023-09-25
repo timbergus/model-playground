@@ -5,12 +5,6 @@
       "FRA": true,
       "DEU": true
     },
-    "metadata": {
-      "value": "string",
-      "creation": true,
-      "editable": false,
-      "Notes": "This is a property."
-    },
     "Type B": {
       "ITA": true,
       "FRA": true,
@@ -18,6 +12,12 @@
     },
     "Type C": {
       "FRA": true
+    },
+    "metadata": {
+      "value": "string",
+      "creation": true,
+      "editable": false,
+      "Notes": "This is a property."
     }
   },
   "secondProperty": {
@@ -25,11 +25,6 @@
       "ITA": true,
       "FRA": true,
       "DEU": true
-    },
-    "metadata": {
-      "value": "string",
-      "creation": true,
-      "Notes": "This is another property."
     },
     "Type B": {
       "ESP": false,
@@ -42,6 +37,11 @@
       "ITA": true,
       "FRA": false,
       "DEU": true
+    },
+    "metadata": {
+      "value": "string",
+      "creation": true,
+      "Notes": "This is another property."
     }
   },
   "thirdProperty": {
@@ -49,6 +49,15 @@
       "ESP": false,
       "FRA": false,
       "DEU": false
+    },
+    "Type B": {
+      "ESP": true,
+      "ITA": false
+    },
+    "Type C": {
+      "ESP": false,
+      "ITA": false,
+      "FRA": true
     },
     "metadata": {
       "value": "VALUES",
@@ -59,15 +68,6 @@
         "secondProperty": false
       },
       "Notes": "Nothing more to say about this one."
-    },
-    "Type B": {
-      "ESP": true,
-      "ITA": false
-    },
-    "Type C": {
-      "ESP": false,
-      "ITA": false,
-      "FRA": true
     }
   },
   "fourthProperty": {
@@ -76,9 +76,6 @@
       "FRA": true,
       "DEU": true
     },
-    "metadata": {
-      "value": "number"
-    },
     "Type B": {
       "ESP": true,
       "ITA": false,
@@ -88,6 +85,9 @@
       "ESP": false,
       "FRA": true,
       "DEU": true
+    },
+    "metadata": {
+      "value": "number"
     }
   },
   "fifthProperty": {
@@ -95,9 +95,6 @@
       "ESP": true,
       "FRA": true,
       "DEU": false
-    },
-    "metadata": {
-      "value": "number"
     },
     "Type B": {
       "ESP": true,
@@ -107,6 +104,9 @@
     "Type C": {
       "ITA": true,
       "FRA": true
+    },
+    "metadata": {
+      "value": "number"
     }
   },
   "sixthProperty": {
@@ -114,12 +114,6 @@
       "ESP": false,
       "ITA": true,
       "DEU": false
-    },
-    "metadata": {
-      "value": "MORE_VALUES",
-      "dependencies": {
-        "secondProperty": "sad"
-      }
     },
     "Type B": {
       "ESP": false,
@@ -131,6 +125,12 @@
       "ESP": true,
       "FRA": false,
       "DEU": false
+    },
+    "metadata": {
+      "value": "MORE_VALUES",
+      "dependencies": {
+        "secondProperty": "sad"
+      }
     }
   }
 }
