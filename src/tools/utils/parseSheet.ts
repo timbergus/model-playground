@@ -22,7 +22,7 @@ export const parseSheet = (sheet: Sheet) => {
         values[sheetName][country] = []
         for (let a = 2; a < sheetData.length; a++) {
           const value = sheetData[a][indices[iter]]
-          if (value === 'Not apply') break
+          if (value === 'Not required') break
           if (typeof value === 'string') {
             values[sheetName][country]?.push(value)
           }
