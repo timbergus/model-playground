@@ -172,6 +172,7 @@ dist
 .idea
 
 # Data
-*.xlsx
+*.xlsx*
 .DS_Store
 .vscode
+build
