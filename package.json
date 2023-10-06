@@ -10,7 +10,7 @@
     "email": "timbergus@gmail.com"
   },
   "scripts": {
-    "build:model": "bun src/index.ts extract",
+    "build:model": "bun src/index.ts extract data/Model.xlsx -p build",
     "build:values": "bun src/index.ts extract data/Values.xlsx -p build"
   },
   "keywords": [
