@@ -4,9 +4,10 @@ import { isCountryISO3 } from './isCountryISO3'
 import { parseRow } from './parseRow'
 
 export const parseSheet = (sheet: Sheet) => {
-  const isStatic = /\w+(_S)$/.test(sheet.name)
+  const defaultValuesIndex = sheet.data[1].indexOf('default')
+  const isCountrySpecific = defaultValuesIndex < 0
 
-  const sheetName = isStatic ? sheet.name.replace(/_S$/, '') : sheet.name
+  const sheetName = sheet.name
   const sheetData = sheet.data
 
   let notRequiredIndex = NaN
@@ -26,7 +27,9 @@ export const parseSheet = (sheet: Sheet) => {
         values[sheetName][country] = []
         for (let a = 2; a < sheetData.length; a++) {
           const value = sheetData[a][indices[iter]]
-          const label = isStatic ? sheetData[a][indices[iter] + 1] : undefined
+          const label = isCountrySpecific
+            ? sheetData[a][indices[iter] + 1]
+            : sheetData[a][defaultValuesIndex]
           if (value === 'Not required' || a === notRequiredIndex) {
             // This value is always in the first column.
             // We stored it the first time around.
@@ -37,7 +40,17 @@ export const parseSheet = (sheet: Sheet) => {
             typeof value === 'string' &&
             (typeof label === 'string' || typeof label === 'undefined')
           ) {
-            values[sheetName][country]?.push({ value, label })
+            values[sheetName][country]?.push(
+              isCountrySpecific
+                ? {
+                    value,
+                    label,
+                  }
+                : {
+                    value,
+                    default: label,
+                  }
+            )
           }
         }
       }
