@@ -18,7 +18,11 @@ export type Result = Record<
 >
 
 type CountryStatus = Partial<Record<CountryISO3, boolean>>
-type CountryValues = Partial<Record<CountryISO3, string[]>>
+
+type CountryValues = Partial<
+  Record<CountryISO3, { value: string; label?: string }[]>
+>
+
 type Metadata = Record<
   string,
   string | boolean | Record<string, string | number | boolean>
