@@ -7,6 +7,10 @@ export const parseSheet = (sheet: Sheet) => {
   const sheetName = sheet.name
   const sheetData = sheet.data
 
+  const isStatic = /\w+(_S)$/.test(sheetName)
+
+  let notRequiredIndex = NaN
+
   const values: Values = {
     [sheetName]: {},
   }
@@ -22,9 +26,18 @@ export const parseSheet = (sheet: Sheet) => {
         values[sheetName][country] = []
         for (let a = 2; a < sheetData.length; a++) {
           const value = sheetData[a][indices[iter]]
-          if (value === 'Not required') break
-          if (typeof value === 'string') {
-            values[sheetName][country]?.push(value)
+          const label = isStatic ? sheetData[a][indices[iter] + 1] : undefined
+          if (value === 'Not required' || a === notRequiredIndex) {
+            // This value is always in the first column.
+            // We stored it the first time around.
+            if (isNaN(notRequiredIndex)) notRequiredIndex = a
+            break
+          }
+          if (
+            typeof value === 'string' &&
+            (typeof label === 'string' || typeof label === 'undefined')
+          ) {
+            values[sheetName][country]?.push({ value, label })
           }
         }
       }
