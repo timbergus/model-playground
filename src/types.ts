@@ -20,7 +20,7 @@ export type Result = Record<
 type CountryStatus = Partial<Record<CountryISO3, boolean>>
 
 type CountryValues = Partial<
-  Record<CountryISO3, { value: string; label?: string }[]>
+  Record<CountryISO3, { value: string; label?: string; default?: string }[]>
 >
 
 type Metadata = Record<
