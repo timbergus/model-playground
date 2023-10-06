@@ -4,10 +4,10 @@ import { isCountryISO3 } from './isCountryISO3'
 import { parseRow } from './parseRow'
 
 export const parseSheet = (sheet: Sheet) => {
-  const sheetName = sheet.name
-  const sheetData = sheet.data
+  const isStatic = /\w+(_S)$/.test(sheet.name)
 
-  const isStatic = /\w+(_S)$/.test(sheetName)
+  const sheetName = isStatic ? sheet.name.replace(/_S$/, '') : sheet.name
+  const sheetData = sheet.data
 
   let notRequiredIndex = NaN
 
