@@ -3,7 +3,7 @@ import { COUNTRIES } from './constants'
 export type Country = keyof typeof COUNTRIES
 export type CountryISO3 = (typeof COUNTRIES)[keyof typeof COUNTRIES]
 
-export type Row = (string | boolean | undefined)[]
+export type Row = (string | number | boolean | undefined)[]
 
 export type Sheet = {
   name: string
@@ -14,7 +14,10 @@ export type Dependency = Record<string, any>
 
 export type Result = Record<
   string,
-  Record<string, Record<string, Dependency | string | boolean | undefined>>
+  Record<
+    string,
+    Record<string, Dependency | string | number | boolean | undefined>
+  >
 >
 
 type CountryStatus = Partial<Record<CountryISO3, boolean>>

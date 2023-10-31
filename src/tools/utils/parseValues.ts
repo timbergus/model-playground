@@ -30,10 +30,7 @@ export const parseValues = (
         const prop = propertiesRow[iter]
         if (typeof prop === 'string') {
           const value = row[iter]
-          if (
-            prop === 'dependencies' &&
-            (typeof value === 'string' || typeof value === 'number')
-          ) {
+          if (prop === 'dependencies' && typeof value === 'string') {
             result[property].metadata[prop] = parseDependencies(value)
           } else {
             result[property].metadata[prop] = value

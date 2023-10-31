@@ -40,17 +40,10 @@ export const parseSheet = (sheet: Sheet) => {
             (typeof value === 'string' || typeof value === 'number') &&
             (typeof label === 'string' || typeof label === 'undefined')
           ) {
-            values[sheetName][country]?.push(
-              isCountrySpecific
-                ? {
-                    value,
-                    label,
-                  }
-                : {
-                    value,
-                    default: label,
-                  }
-            )
+            values[sheetName][country]?.push({
+              value: typeof value === 'number' ? value.toString() : value,
+              ...(isCountrySpecific ? { label } : { default: label }),
+            })
           }
         }
       }
