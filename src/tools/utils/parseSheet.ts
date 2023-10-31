@@ -37,7 +37,7 @@ export const parseSheet = (sheet: Sheet) => {
             break
           }
           if (
-            typeof value === 'string' &&
+            (typeof value === 'string' || typeof value === 'number') &&
             (typeof label === 'string' || typeof label === 'undefined')
           ) {
             values[sheetName][country]?.push(
