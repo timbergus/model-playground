@@ -12,7 +12,8 @@
   "scripts": {
     "build:model": "bun src/index.ts extract data/Model.xlsx -p build",
     "build:values": "bun src/index.ts extract data/Values.xlsx -p build",
-    "build:categories": "bun src/index.ts extract data/Categories.xlsx -p build"
+    "build:categories": "bun src/index.ts extract data/Categories.xlsx -p build",
+    "prepare": "husky install"
   },
   "keywords": [
     "cli",
@@ -31,6 +32,7 @@
     "chalk": "^5.3.0",
     "commander": "^11.1.0",
     "figlet": "^1.7.0",
+    "husky": "^8.0.3",
     "node-xlsx": "^0.23.0",
     "remove": "^0.1.5"
   }
