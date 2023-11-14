@@ -1,14 +1,160 @@
 {
   "VALUES": {
-    "ESP": ["AAA", "BBB", "CCC"],
-    "ITA": ["EEE", "FFF"],
-    "FRA": ["GGG", "HHH", "III"],
-    "DEU": ["JJJ"]
+    "ESP": [
+      {
+        "value": "AAA",
+        "label": "L_AAA"
+      },
+      {
+        "value": "BBB",
+        "label": "L_BBB"
+      },
+      {
+        "value": "CCC",
+        "label": "L_CCC"
+      }
+    ],
+    "ITA": [
+      {
+        "value": "EEE",
+        "label": "L_EEE"
+      },
+      {
+        "value": "FFF",
+        "label": "L_FFF"
+      }
+    ],
+    "FRA": [
+      {
+        "value": "GGG",
+        "label": "L_GGG"
+      },
+      {
+        "value": "HHH",
+        "label": "L_HHH"
+      },
+      {
+        "value": "III",
+        "label": "L_III"
+      }
+    ],
+    "DEU": [
+      {
+        "value": "JJJ",
+        "label": "L_JJJ"
+      }
+    ]
   },
   "MORE_VALUES": {
-    "ESP": ["#000", "#111", "#222"],
-    "ITA": ["#333", "#444", "#555", "#666", "#777"],
-    "FRA": ["#888", "#999"],
-    "DEU": ["#AAA", "#BBB", "#CCC"]
+    "ESP": [
+      {
+        "value": "#000",
+        "label": "L_#000"
+      },
+      {
+        "value": "#111",
+        "label": "L_#111"
+      },
+      {
+        "value": "#222",
+        "label": "L_#222"
+      }
+    ],
+    "ITA": [
+      {
+        "value": "#333",
+        "label": "L_#333"
+      },
+      {
+        "value": "#444",
+        "label": "L_#444"
+      },
+      {
+        "value": "#555",
+        "label": "L_#555"
+      },
+      {
+        "value": "#666",
+        "label": "L_#666"
+      },
+      {
+        "value": "#777",
+        "label": "L_#777"
+      }
+    ],
+    "FRA": [
+      {
+        "value": "#888",
+        "label": "L_#888"
+      },
+      {
+        "value": "#999",
+        "label": "L_#999"
+      }
+    ],
+    "DEU": [
+      {
+        "value": "#AAA",
+        "label": "L_#AAA"
+      },
+      {
+        "value": "#BBB",
+        "label": "L_#BBB"
+      },
+      {
+        "value": "#CCC",
+        "label": "L_#CCC"
+      }
+    ]
+  },
+  "STATIC_VALUES": {
+    "ESP": [
+      {
+        "value": "#S000",
+        "default": "Default value A"
+      },
+      {
+        "value": "#S111",
+        "default": "Default value B"
+      },
+      {
+        "value": "#S222",
+        "default": "Default value C"
+      }
+    ],
+    "ITA": [
+      {
+        "value": "#S333",
+        "default": "Default value A"
+      },
+      {
+        "value": "#S444",
+        "default": "Default value B"
+      },
+      {
+        "value": "#S555",
+        "default": "Default value C"
+      }
+    ],
+    "FRA": [
+      {
+        "value": "#S888",
+        "default": "Default value A"
+      },
+      {
+        "value": "#S999",
+        "default": "Default value B"
+      }
+    ],
+    "DEU": [
+      {
+        "value": "#SAAA",
+        "default": "Default value A"
+      },
+      {
+        "value": "#SBBB",
+        "default": "Default value B"
+      }
+    ]
   }
 }
