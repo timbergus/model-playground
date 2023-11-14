@@ -1,0 +1,11 @@
+{
+  "Category A": ["Subcategory AA", "Subcategory AB", "Subcategory AC"],
+  "Category B": ["Subcategory BB"],
+  "Category C": [
+    "Subcategory CC",
+    "Subcategory CD",
+    "Subcategory CE",
+    "Subcategory CF",
+    "Subcategory CG"
+  ]
+}

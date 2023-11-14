@@ -33,6 +33,7 @@ type Metadata = Record<
 
 export type Values = Record<string, CountryValues>
 export type Model = Record<string, Record<string, CountryStatus | Metadata>>
+export type Categories = Record<string, string[]>
 
 export const isISOCountry = (country: any): country is CountryISO3 => {
   return Object.values(COUNTRIES).includes(country)

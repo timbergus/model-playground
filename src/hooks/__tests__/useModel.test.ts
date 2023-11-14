@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'bun:test'
 import { useModel } from '../useModel'
-import model from './__mocks__/business.model.json'
+import model from './__mocks__/model.json'
 
 describe('useModel', () => {
   test('firstProperty should be visible and required for type A in Spain', () => {
