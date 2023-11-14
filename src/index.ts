@@ -7,6 +7,7 @@ import { extractValues } from './tools/extractValues'
 import { existsSync, mkdirSync } from 'node:fs'
 import { textSync } from 'figlet'
 import chalk from 'chalk'
+import { extractCategories } from './tools/extractCategories'
 
 const program = new Command()
 
@@ -66,6 +67,9 @@ program
     } else if (file.toLowerCase().includes('values.xlsx')) {
       extractValues(file, options.path)
       console.log(chalk.cyan('✅', 'Values extracted successfully', '\n'))
+    } else if (file.toLowerCase().includes('categories.xlsx')) {
+      extractCategories(file, options.path)
+      console.log(chalk.cyan('✅', 'Categories extracted successfully', '\n'))
     } else {
       console.log(
         chalk.red('❗️', 'Please, select a model or values XLSX file', '\n')
